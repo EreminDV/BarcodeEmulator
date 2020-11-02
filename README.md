@@ -27,3 +27,12 @@ but you can easy (Ctrl-C + Ctrl-V) port it to .net Core 2 or .net Core 3 or .Net
 
 
 This is a 10-minute cooked gift for my friend.
+
+
+# Known bugs
+* Scanner not send <cr><lf> ("\r\n") at the end of data.
+  we use scanner configuration software to configure suffix (#0D#0A) for scanned data.
+  Although, you can add some code in Read function (at Program.cs) near  
+  _serialPort.ReadLine()
+  to set read timeout 
+  or use _serialPort.Read(buffer,0, 13); // for EAN13
