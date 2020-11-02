@@ -1,0 +1,18 @@
+## scanner connection params
+#port,baud rate,databits,parity,StopBits,Handshake
+connection=COM2,9600,8,None,1,None
+
+## output to
+clipboard = true
+keyboard = false
+file=.\barcode.scan.log
+
+## data processing
+
+#remove whitespaces and \r\n
+trimData=false
+
+#set what add to readed code, may be empty
+prefix=
+postfix=
+
